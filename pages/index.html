@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exportadora de productos cítricos de calidad internacional">
+    <title>Merlet - Exportadora de Cítricos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header se importará como archivo externo -->
+    <div id="header-placeholder"></div>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Calidad Cítrica de Clase Mundial</h2>
+            <p>Exportamos los mejores productos cítricos, asegurando frescura y sabor.</p>
+            <a href="#products" class="btn">Explorar Productos</a>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>Sobre Nosotros</h2>
+        <p>En Merlet, nos especializamos en la exportación de productos cítricos de alta calidad. Con años de experiencia en el mercado internacional, garantizamos frescura y cumplimiento de los estándares más altos.</p>
+    </section>
+
+    <section id="products" class="container">
+        <h2>Productos</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="images/oranges.jpg" alt="Naranjas">
+                <h3>Naranjas</h3>
+                <p>Frescas y jugosas, ideales para cualquier mercado.</p>
+            </div>
+            <div class="product-item">
+                <img src="images/lemons.jpg" alt="Limones">
+                <h3>Limones</h3>
+                <p>Calidad excepcional, perfectos para exportación.</p>
+            </div>
+            <div class="product-item">
+                <img src="images/grapefruits.jpg" alt="Toronjas">
+                <h3>Toronjas</h3>
+                <p>Sabor único que encanta a clientes internacionales.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="container">
+        <h2>Noticias</h2>
+        <p>Próximamente, un espacio para conocer nuestras últimas novedades y logros.</p>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contacto</h2>
+        <form action="#" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer se importará como archivo externo -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Importación del header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        // Importación del footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
