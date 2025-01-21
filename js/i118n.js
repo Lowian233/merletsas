@@ -1,19 +1,18 @@
-let currentLang = "en";
-const langButtons = document.querySelectorAll("[data-language]");
+const langButtons = document.querySelectorAll(("data-language"));
 const textsToChange = document.querySelectorAll("[data-section]");
-console.log(textsToChange);
 
 langButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        fetch(`../languages/${button.dataset.language}.json`)
-            .then(res => res.json())
-            .then(data => {
-                textsToChange.forEach((el) => {
-                    const section = el.dataset.section;
-                    const value = el.dataset.value;
 
-                    el.innerHTML = data[section][value];
-                })
-            })
-    })
-})
+        fetch('../i18n/${button.dataset.language}.json')
+            .then(res => res.json())
+            .then(i18n => {
+            textsToChange.forEach((el) => {
+                const section = el.dataset.section;
+                const value = el.dataset.value;
+
+            text.innerHTML = data[lang][text.dataset.section];
+        });
+    });
+    });
+});
