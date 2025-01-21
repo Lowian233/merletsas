@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* Colores principales */
+    --color-orange: #F89D28;
+    --color-lime: #3C9C5A;
+
+    /* Colores secundarios */
+    --color-dark-green: #226B3F;
+    --color-light-gray: #F5F5F5;
+    --color-dark-gray: #333333;
+
+    /* Tipografías */
+    --font-title: 'Poppins', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+
+    /* Otros */
+    --border-radius: 5px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark-gray);
+    background-color: var(--color-light-gray);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-title);
+    color: var(--color-dark-green);
+}
+
+a {
+    color: var(--color-lime);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-orange);
+}
+
+button {
+    background-color: var(--color-orange);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-dark-green);
+}
+
