@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Exportadora de productos cítricos de calidad internacional">
     <title>Merlet - Exportadora de Cítricos</title>
-    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/button.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <link rel="shortcut icon" href="./assets/public/images/logo.png" type="image/x-icon">
 <body>
     <!-- Header se importará como archivo externo -->
-    <div id="header-placeholder"></div>
-
+    <div id="header"></div>
     <section id="hero" class="hero-video">
         <video autoplay muted loop class="hero-video-background">
           <source src="/assets/public/videos/hero.mp4" type="video/mp4">
@@ -20,20 +24,20 @@
         <div class="hero-overlay">
           <div class="hero-content">
             <h1>
-              <span>Desde Nuestros Huertos</span><br>
+              <span data-section="hero" data-key="heading">Desde Nuestros Huertos</span><br>
               Frutas Cítricas Premium
             </h1>
-            <p>
+            <p data-section="hero" data-key="subheading">
               Disfruta de la más fina selección de frutas cítricas, cultivadas con cuidado y tradición en nuestros huertos familiares desde 1950.
             </p>
             <div class="hero-buttons">
-              <a href="pages/products.html" class="btn-primary">Explorar Nuestros Productos</a>
+              <a href="pages/products.html" class="btn-primary" data-section="hero" data-key="btn_products">Explorar Nuestros Productos</a>
               <a href="pages/about.html" class="btn-secondary">Sobre Nosotros</a>
             </div>
           </div>
         </div>
       </section>
-    <section id="about" class="container">
+    <section id="about" class="container" data-section="about" data-key="description">
         <h2>Sobre Nosotros</h2>
         <p>En Merlet, nos especializamos en la exportación de productos cítricos de alta calidad. Con años de experiencia en el mercado internacional, garantizamos frescura y cumplimiento de los estándares más altos.</p>
     </section>
@@ -81,32 +85,13 @@
     </section>
 
     <!-- Footer se importará como archivo externo -->
-    <div id="footer-placeholder"></div>
-
-   <script>
-        // Importación del header
-    fetch('components/header.html') 
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
-        })
-        .catch(error => console.error('Error al cargar el header:', error));
-
-    // Importación del footer
-    fetch('components/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-        })
-        .catch(error => console.error('Error al cargar el footer:', error));
-
-    // Importar el archivo de JavaScript
-    fetch('js/main.js')
-        .then(response => response.text())
-        .then(data => {
-            eval(data);
-        })
-        .catch(error => console.error('Error al cargar el archivo main.js:', error));
-    </script>
+    <div id="footer"></div>
+    <script src="./js/i18n.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+ 
 </body>
 </html>

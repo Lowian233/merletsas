@@ -1,0 +1,24 @@
+{
+    "header": {
+      "home": "Inicio",
+      "about": "Sobre Nosotros",
+      "Products": "Productos",
+      "contact": "Contacto",
+      "news": "Noticias"
+    },
+  
+    "page": {
+      "title": "Merlet - Exportadora de Cítricos"
+    },
+    "hero": {
+      "heading": "Desde Nuestros Huertos",
+      "subheading": "Frutas Cítricas Premium",
+      "description": "Disfruta de la más fina selección de frutas cítricas, cultivadas con cuidado y tradición en nuestros huertos familiares desde 1950.",
+      "btn_products": "Explorar Nuestros Productos",
+      "btn_about": "Sobre Nosotros"
+    },
+    "about": {
+      "heading": "Sobre Nosotros",
+      "description": "En Merlet, nos especializamos en la exportación de productos cítricos de alta calidad. Con años de experiencia en el mercado internacional, garantizamos frescura y cumplimiento de los estándares más altos."
+    }
+}
