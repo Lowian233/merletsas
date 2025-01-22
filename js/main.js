@@ -1,33 +1,38 @@
 // Mostrar/Ocultar botón de WhatsApp
 document.addEventListener("scroll", () => {
     const whatsappButton = document.querySelector(".whatsapp-button");
-    if (window.scrollY > 200) {
-      whatsappButton.classList.add("visible");
-      whatsappButton.classList.remove("hidden");
-    } else {
+    const contactSection = document.querySelector("#contact"); // Asegúrate de que la sección de contacto tenga el id "contact"
+    const contactSectionTop = contactSection.offsetTop;
+    const contactSectionBottom = contactSectionTop + contactSection.offsetHeight;
+  
+    if (window.scrollY >= contactSectionTop && window.scrollY <= contactSectionBottom) {
       whatsappButton.classList.add("hidden");
       whatsappButton.classList.remove("visible");
+    } else {
+      whatsappButton.classList.add("visible");
+      whatsappButton.classList.remove("hidden");
     }
   });
+  
   document.addEventListener('DOMContentLoaded', function() {
     // Cargar el header
     fetch('componets/header.html')
-        .then(response => response.text())
-        .then(data => {
-     document.getElementById('header').innerHTML = data;
-             // Lógica del menú móvil
-           const nav = document.querySelector("#nav");
-           const open= document.querySelector("#open");
-           const close = document.querySelector("#close");
-           
-           open.addEventListener("click", () => {
-              nav.classList.add("active");
-            });
-            close.addEventListener("click", () => {
-              nav.classList.remove("active");
-            });     
-        }); 
-      
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+        // Lógica del menú móvil
+        const nav = document.querySelector("#nav");
+        const open = document.querySelector("#open");
+        const close = document.querySelector("#close");
+  
+        open.addEventListener("click", () => {
+          nav.classList.add("active");
+        });
+        close.addEventListener("click", () => {
+          nav.classList.remove("active");
+        });
+      });
+   
     // Cargar el footer
     fetch('componets/footer.html')
         .then(response => response.text())

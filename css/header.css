@@ -84,6 +84,23 @@
 .menu-close{
     display: none;
 }
+.lang-button{
+    border-radius: var(--border-radius);
+    margin-bottom: 0 auto;
+    padding: 0.5rem 0.5rem;
+}
+.lang-button img{
+    width: 30px;
+    height: 30px;
+}
+.lang-button span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: lower;
+    font-weight: semibold;
+    margin: 0;
+}
 
   /* Media Queries */
 @media screen and (max-width: 900px) {
@@ -108,6 +125,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        right: auto;
         border: 0;
         font-size: 1.25rem;
         background-color: transparent;
@@ -118,7 +136,7 @@
     .menu-close {
         position: absolute;
         top: 1rem;
-        right: 1rem;
+        right: auto;
         z-index: 1001;
         color: var(--color-light-gray);
     }

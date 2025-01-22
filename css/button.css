@@ -48,9 +48,9 @@ body {
 }
 @media screen and (max-width: 768px) {
   .whatsapp-button {
-    right: 16px;
+    right: auto;
     bottom: 16px;
-    top: auto;
+    top: 50%;
     width: 50px;
     height: 50px;
   }
