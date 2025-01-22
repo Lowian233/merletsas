@@ -99,110 +99,98 @@
     display: flex;
   }
  */
-   @media screen and (max-width: 600px) {
+  /* Media Queries */
+@media screen and (max-width: 900px) {
+    .header .nav {
+        justify-content: center;
+    }
+
+    .header .logo img {
+        width: 120px;
+    }
+
+    #bg-video {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
     .menu-open,
-    .menu-close{
+    .menu-close {
         display: block;
         border: 0;
         font-size: 1.25rem;
         background-color: transparent;
         cursor: pointer;
+        color: var(--color-orange);
     }
+
     .menu-close {
-        top: 100%;
-        z-index: 1000;
         position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1001;
         color: var(--color-light-gray);
     }
+
     .nav {
         opacity: 0;
         visibility: hidden;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        gap: 1rem;
-        position: absolute;
-        top: 100%;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
         left: 0;
-        bottom: 0;
         width: 100%;
-        padding: 2rem;
-        background-color: rgba(242, 242, 242, 0.5); /* Ajusta la opacidad del fondo */
-        box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
-        transition: opacity 0.3s ease, visibility 0.3s ease;       
+        height: 100vh;
+        background-color: var(--color-dark-green);
+        transition: all 0.3s ease;
+        z-index: 1000;
     }
-    .nav.active {            
-            opacity: 1;
-            visibility: visible;
-        }
+
+    .nav.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
     .nav-list {
-            flex-direction: column;
-            text-align: center;
-            align-items: flex-start;
-            margin-top: 2rem;
-        }
-        
-        .nav li a{
-            color: var(--color-orange);
-            text-decoration: none;
-        }
-    
-  }
-  @media (max-width: 900px) {
-         /* Estilos para el botón WhatsApp */
-        @media (max-width: 720px) {
-            #bg-video {
-                width:auto;
-                height: auto;
-            }
-        }       
-     @media (max-width: 600px) {
-            .button {
-                margin: 1rem 0;
-            }
-        }
-  }
-    @keyframes hero {
-        0%
-        {
-          transform: rotate(0deg);
-        }
-        100%
-        {
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes spin {
-           0% {
-                    transform: rotate(0deg);
-                }
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-            
-            body {
-                animation: fadeIn 1s ease-in;
-            }
-            @media (min-width: 768px) {
-                .hero h1 {
-                    font-size: 3rem;
-                }
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
 
-                .hero p {
-                    font-size: 1.5rem;
-                }
+    .nav-list li a {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
 
-                .about .services {
-                    flex-direction: row;
-                    justify-content: center;
-                }
+    .button {
+        margin: 1rem 0;
+    }
+}
 
-                .projects-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Typography */
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+    }
+}

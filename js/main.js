@@ -36,61 +36,63 @@ document.addEventListener("scroll", () => {
         });
 });
 // Simular la carga de la página
-let loadPercentage = 0;
-const loadingPercentageElement = document.getElementById('loading-percentage');
-const interval = setInterval(() => {
-    loadPercentage += 1;
-    loadingPercentageElement.textContent = `${loadPercentage}%`;
+document.addEventListener('DOMContentLoaded', () => {
+  // Preloader
+  const preloader = document.getElementById('preloader');
+  const loadingPercentageElement = document.getElementById('loading-percentage');
 
-    if (loadPercentage >= 100) {
-        clearInterval(interval);
-        document.getElementById('preloader').style.display = 'none';
-    }
-}, 30); // Ajusta el tiempo según sea necesario
+  if (preloader && loadingPercentageElement) {
+      let loadPercentage = 0;
+      const interval = setInterval(() => {
+          loadPercentage += 1;
+          loadingPercentageElement.textContent = `${loadPercentage}%`;
 
-
-// Quitar el preloader al cargar
-window.addEventListener('load', function() {
-document.getElementById('preloader').style.display = 'none';
-});
-// Cambiar el estilo del header al hacer scroll
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.header');
-    header.classList.toggle('header--scrolled', window.scrollY > 10);}
-);
-const counterElement = document.getElementById("counter");
-let count = 0;
-const target = 100; // Número final
-const speed = 20; // Velocidad del contador (ms)
-
-const updateCounter = () => {
-  if (count < target) {
-    count++;
-    counterElement.textContent = "+" + count ;
-    setTimeout(updateCounter, speed);
+          if (loadPercentage >= 100) {
+              clearInterval(interval);
+              preloader.style.display = 'none';
+          }
+      }, 30);
   }
-};
 
-// Iniciar el contador
-updateCounter();
-document.addEventListener("DOMContentLoaded", () => {
-  // Create intersection observer for stats section
+  // Header scroll effect
+  window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header');
+      if (header) {
+          header.classList.toggle('header--scrolled', window.scrollY > 10);
+      }
+  });
+
+  // Counter animation
+  const counterElement = document.getElementById("counter");
+  if (counterElement) {
+      let count = 0;
+      const target = 100;
+      const speed = 20;
+
+      const updateCounter = () => {
+          if (count < target) {
+              count++;
+              counterElement.textContent = "+" + count;
+              setTimeout(updateCounter, speed);
+          }
+      };
+      updateCounter();
+  }
+
+  // Stats counter animation
   const statsObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
           if (entry.isIntersecting) {
-              // Get all stat counters
               const stats = entry.target.querySelectorAll(".stat-item h3");
               stats.forEach((stat) => {
                   const endValue = parseInt(stat.textContent.replace("+", "").replace("%", ""));
                   animateCount(stat, 0, endValue, 2000);
               });
-              // Unobserve after animation starts
               statsObserver.unobserve(entry.target);
           }
       });
   }, { threshold: 0.5 });
 
-  // Observe stats section
   const statsSection = document.querySelector("#statistics");
   if (statsSection) {
       statsObserver.observe(statsSection);
@@ -99,17 +101,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function animateCount(element, start, end, duration) {
   let startTime = null;
-
   const step = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
       const value = Math.floor(progress * (end - start) + start);
       element.textContent = value + (element.textContent.includes("+") ? "+" : 
                                    element.textContent.includes("%") ? "%" : "");
-      if (progress > 1) {
+      if (progress < 1) {
           window.requestAnimationFrame(step);
       }
   };
-
   window.requestAnimationFrame(step);
 }
