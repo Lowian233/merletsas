@@ -73,3 +73,43 @@ const updateCounter = () => {
 
 // Iniciar el contador
 updateCounter();
+document.addEventListener("DOMContentLoaded", () => {
+  // Create intersection observer for stats section
+  const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              // Get all stat counters
+              const stats = entry.target.querySelectorAll(".stat-item h3");
+              stats.forEach((stat) => {
+                  const endValue = parseInt(stat.textContent.replace("+", "").replace("%", ""));
+                  animateCount(stat, 0, endValue, 2000);
+              });
+              // Unobserve after animation starts
+              statsObserver.unobserve(entry.target);
+          }
+      });
+  }, { threshold: 0.5 });
+
+  // Observe stats section
+  const statsSection = document.querySelector("#statistics");
+  if (statsSection) {
+      statsObserver.observe(statsSection);
+  }
+});
+
+function animateCount(element, start, end, duration) {
+  let startTime = null;
+
+  const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const value = Math.floor(progress * (end - start) + start);
+      element.textContent = value + (element.textContent.includes("+") ? "+" : 
+                                   element.textContent.includes("%") ? "%" : "");
+      if (progress > 1) {
+          window.requestAnimationFrame(step);
+      }
+  };
+
+  window.requestAnimationFrame(step);
+}
