@@ -40,34 +40,44 @@ body {
   z-index: 1000;
   cursor: pointer;
   transition: all 0.3s ease;
+  animation: pulsate 2s infinite;
 }
 .whatsapp-button:hover {
   background-color: #128C7E;
   transform: scale(1.1);
 }
+@media screen and (max-width: 768px) {
+  .whatsapp-button {
+    right: 16px;
+    bottom: 16px;
+    top: auto;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .whatsapp-button img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Optimize animation */
 @keyframes pulsate {
   0% {
-      box-shadow: 0 0 10px 0 rgba(37, 211, 102, 0.7), 0 0 20px 0 rgba(37, 211, 102, 0.5), 0 0 30px 0 rgba(37, 211, 102, 0.3); /* Verde con opacidad */
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
   }
-  50% {
-      box-shadow: 0 0 20px 10px rgba(37, 211, 102, 0), 0 0 30px 10px rgba(37, 211, 102, 0), 0 0 40px 10px rgba(37, 211, 102, 0); /* Aumenta el radio y disminuye opacidad */
+  
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
   }
+  
   100% {
-      box-shadow: 0 0 10px 0 rgba(69, 238, 63, 0.7), 0 0 20px 0 rgba(37, 211, 102, 0.5), 0 0 30px 0 rgba(37, 211, 102, 0.3);
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
 }
-
- @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .animate-fadeIn {
   animation: fadeIn 0.5s ease-out forwards;
 }

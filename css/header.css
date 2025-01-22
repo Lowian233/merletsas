@@ -84,21 +84,7 @@
 .menu-close{
     display: none;
 }
-/* .nav__toggle {
-    display: none;
-    cursor: pointer;
-  }
-  .nav__toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--black-color);
-    margin: 5px 0;
-  }
-  .nav .show{
-    display: flex;
-  }
- */
+
   /* Media Queries */
 @media screen and (max-width: 900px) {
     .header .nav {
@@ -119,6 +105,9 @@
     .menu-open,
     .menu-close {
         display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border: 0;
         font-size: 1.25rem;
         background-color: transparent;
