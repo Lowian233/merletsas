@@ -1,103 +1,174 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Exportadora de productos cítricos de calidad internacional">
-    <title>Merlet - Exportadora de Cítricos</title>
+    <meta name="description" content="Exporter of high-quality citrus products for the international market">
+    <title>Merlet - Citrus Exporter</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
     <link rel="shortcut icon" href="./assets/public/images/logo.png" type="image/x-icon">
     <!-- google font -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
     <!-- styles   -->
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/button.css">
     <link rel="stylesheet" href="../css/hero.css">
     <link rel="stylesheet" href="../css/responsive.css">
+</head>
 <body>
-    <!-- Header se importará como archivo externo -->
     <div id="header"></div>
+    <!-- Hero Section -->
     <section id="hero" class="hero-video">
         <video autoplay muted loop class="hero-video-background">
           <source src="../assets/public/videos/hero.mp4" type="video/mp4">
-          Tu navegador no soporta videos HTML5.
+          Your browser does not support HTML5 videos.
         </video>
         <div class="hero-overlay">
           <div class="hero-content">
             <h1>
-              <span data-section="hero" data-key="heading">Desde Nuestros Huertos</span><br>
-              Frutas Cítricas Premium
+              <span data-section="hero" data-key="heading">From Our Orchards</span><br>
+              Premium Citrus Fruits
             </h1>
             <p data-section="hero" data-key="subheading">
-              Disfruta de la más fina selección de frutas cítricas, cultivadas con cuidado y tradición en nuestros huertos familiares desde 1950.
+              Enjoy the finest selection of citrus fruits, grown with care and tradition in our family orchards since 1950.
             </p>
             <div class="hero-buttons">
-              <a href="pages/products.html" class="btn-primary" data-section="hero" data-key="btn_products">Explorar Nuestros Productos</a>
-              <a href="pages/about.html" class="btn-secondary">Sobre Nosotros</a>
+              <a href="pages/products.html" class="btn-primary" data-section="hero" data-key="btn_products">Explore Our Products</a>
+              <a href="pages/about.html" class="btn-secondary">About Us</a>
             </div>
           </div>
         </div>
-      </section>
-    <section id="about" class="container" data-section="about" data-key="description">
-        <h2>Sobre Nosotros</h2>
-        <p>En Merlet, nos especializamos en la exportación de productos cítricos de alta calidad. Con años de experiencia en el mercado internacional, garantizamos frescura y cumplimiento de los estándares más altos.</p>
-    </section>
-
-    <section id="products" class="container">
-        <h2>Productos</h2>
-        <div class="product-list">
-            <div class="product-item">
-                <img src="images/oranges.jpg" alt="Naranjas">
-                <h3>Naranjas</h3>
-                <p>Frescas y jugosas, ideales para cualquier mercado.</p>
-            </div>
-            <div class="product-item">
-                <img src="images/lemons.jpg" alt="Limones">
-                <h3>Limones</h3>
-                <p>Calidad excepcional, perfectos para exportación.</p>
-            </div>
-            <div class="product-item">
-                <img src="images/grapefruits.jpg" alt="Toronjas">
-                <h3>Toronjas</h3>
-                <p>Sabor único que encanta a clientes internacionales.</p>
+        <!-- Statistics Section -->
+    <section id="statistics" class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up">
+                    <h3>50+</h3>
+                    <p data-i18n="stats.years">Years of Experience</p>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3>30+</h3>
+                    <p data-i18n="stats.countries">Export Countries</p>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3>1000+</h3>
+                    <p data-i18n="stats.hectares">Hectares of Orchards</p>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3>100%</h3>
+                    <p data-i18n="stats.quality">Quality Guaranteed</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="news" class="container">
-        <h2>Noticias</h2>
-        <p>Próximamente, un espacio para conocer nuestras últimas novedades y logros.</p>
+    <!-- Enhanced About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content" data-aos="fade-right">
+                    <h2 data-i18n="about.title">Our Heritage</h2>
+                    <p data-i18n="about.description">At Merlet, we specialize in exporting high-quality citrus products. With years of experience in international markets, we ensure freshness and compliance with the highest standards.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span data-i18n="about.feature1">Sustainable Farming</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span data-i18n="about.feature2">Quality Control</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle"></i>
+                            <span data-i18n="about.feature3">Global Distribution</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <img src="assets/public/images/orchard.jpg" alt="Our Orchards">
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications" class="cert-section">
+        <div class="container">
+            <h2 data-i18n="certifications.title">Our Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-item" data-aos="zoom-in">
+                    <img src="assets/public/images/cert1.png" alt="Certification 1">
+                    <h3>GlobalG.A.P</h3>
+                </div>
+                <div class="cert-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="assets/public/images/cert2.png" alt="Certification 2">
+                    <h3>ISO 9001</h3>
+                </div>
+                <!-- Add more certifications as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 data-i18n="products.title">Our Products</h2>
+            <div class="product-grid">
+                <!-- ...existing product items with enhanced styling... -->
+            </div>
+            <div class="product-features">
+                <div class="feature" data-aos="fade-up">
+                    <i class="bi bi-truck"></i>
+                    <h3 data-i18n="products.shipping">Global Shipping</h3>
+                    <p data-i18n="products.shipping_desc">Fast and reliable delivery worldwide</p>
+                </div>
+                <div class="feature" data-aos="fade-up" data-aos-delay="100">
+                    <i class="bi bi-shield-check"></i>
+                    <h3 data-i18n="products.quality">Quality Guarantee</h3>
+                    <p data-i18n="products.quality_desc">Rigorous quality control standards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Export Map Section -->
+    <section id="export-map" class="map-section">
+        <div class="container">
+            <h2 data-i18n="export.title">Global Presence</h2>
+            <div class="map-container" data-aos="zoom-in">
+                <!-- Add your map implementation here -->
+                <img src="assets/public/images/world-map.png" alt="Export Locations">
+            </div>
+        </div>
+    </section>
+    <!--contact-->
     <section id="contact" class="container">
-        <h2>Contacto</h2>
+        <h2>Contact</h2>
         <form action="#" method="post">
-            <label for="name">Nombre:</label>
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="email">Correo Electrónico:</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="message">Mensaje:</label>
+            <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
 
-            <button type="submit">Enviar</button>
+            <button type="submit">Send</button>
         </form>
     </section>
 
-    <!-- Footer se importará como archivo externo -->
     <div id="footer"></div>
     <script src="./js/i18n.js"></script>
     <script src="./js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-      <script>
-        AOS.init();
-      </script>
- 
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

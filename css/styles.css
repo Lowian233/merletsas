@@ -56,4 +56,156 @@ button {
 button:hover {
     background-color: var(--color-dark-green);
 }
+.stats-section {
+    background: var(--color-light-gray);
+    padding: 4rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--color-orange);
+    margin-bottom: 1rem;
+}
+/* ...existing code... */
+
+/* Common Section Styles */
+section {
+    padding: 5rem 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-dark-green);
+    margin-bottom: 3rem;
+}
+
+/* About Section */
+.about-section {
+    background: #fff;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-content {
+    padding-right: 2rem;
+}
+
+.about-features {
+    margin-top: 2rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.feature i {
+    color: var(--color-orange);
+    font-size: 1.5rem;
+}
+
+/* Certifications Section */
+.cert-section {
+    background: var(--color-light-gray);
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.cert-item {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cert-item img {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+/* Products Section */
+.products-section {
+    background: #fff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.product-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.product-features .feature {
+    flex-direction: column;
+    text-align: center;
+}
+
+.product-features i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Export Map Section */
+.map-section {
+    background: var(--color-light-gray);
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map-container img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        padding-right: 0;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
 
