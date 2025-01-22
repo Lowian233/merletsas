@@ -9,18 +9,18 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
-    <link rel="shortcut icon" href="./assets/public/images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/public/images/logo.png" type="image/x-icon">
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
     <!-- styles   -->
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/button.css">
-    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
 </head>
-<header class="header" id="header">
+<header class="header">
     <div class="container">
         <div class="logo">
             <img src="../assets/public/images/logo.png" alt="Merlet Logo">
@@ -30,7 +30,7 @@
             <button class="menu-close" id="close"><i class="bi bi-x"></i></button>
             <ul class="nav-list">
                 <li><a href="index.html" data-i18n="header.home">Inicio</a></li>
-                <li><a href="../about.html" data-i18n="header.about">Sobre Nosotros</a></li>
+                <li><a href="./about.html" data-i18n="header.about">Sobre Nosotros</a></li>
                 <li><a href="products.html" data-i18n="header.products">Productos</a></li>
                 <li><a href="contacto.html" data-i18n="header.contact">Contacto</a></li>
                 <li><a href="noticias.html" data-i18n="header.news">Noticias</a></li>
@@ -99,7 +99,7 @@
     <section id="about" class="about-section">
         <div class="container">
             <div class="about-grid">
-                <div class="about-content" data-aos="fade-right">
+                <div class="about-content" data-aos="fade-up">
                     <h2 data-i18n="about.title">Nuestra Herencia</h2>
                     <p data-i18n="about.description">En Merlet, nos especializamos en la exportación de cítricos de alta calidad. Con años de experiencia en mercados internacionales, garantizamos frescura y cumplimiento de los más altos estándares.</p>
                     <div class="about-features">
@@ -117,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-image" data-aos="fade-left">
+                <div class="about-image" data-aos="fade-up">
                     <img src="../assets/public/images/heritage/farm-1.jpg" alt="Nuestros Huertos">
                 </div>
             </div>
@@ -133,7 +133,7 @@
                     <h3>GlobalG.A.P</h3>
                 </div>
                 <div class="cert-item" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="./assets/public/images/icons/home.svg" alt="Certificación 2">
+                    <img src="../assets/public/images/icons/home.svg" alt="Certificación 2">
                     <h3>ISO 9001</h3>
                 </div>
             </div>
@@ -151,7 +151,7 @@
                     <div class="product-content">
                         <h3 data-i18n="products.oranges.title">Naranjas Frescas</h3>
                         <p data-i18n="products.oranges.description">Naranjas de calidad premium, ideales para jugo y consumo.</p>
-                        <a href="./pages/products.html#oranges" class="btn-secondary">Saber Más</a>
+                        <a href="../pages/products.html#oranges" class="btn-secondary">Saber Más</a>
                     </div>
                 </div>
                 <div class="product-card" data-aos="fade-up" data-aos-delay="100">
@@ -181,7 +181,7 @@
                     <div class="product-content">
                         <h3 data-i18n="products.mandarins.title">Mandarinas Frescas</h3>
                         <p data-i18n="products.mandarins.description">Mandarinas dulces y fáciles de pelar.</p>
-                        <a href="./pages/products.html#mandarins" class="btn-secondary">Saber Más</a>
+                        <a href="../pages/products.html#mandarins" class="btn-secondary">Saber Más</a>
                     </div>
                 </div>
             </div>
@@ -201,7 +201,7 @@
         <div class="container">
             <h2 data-i18n="contact.title">Contáctanos</h2>
             <div class="contact-grid">
-                <div class="contact-form" data-aos="fade-right">
+                <div class="contact-form" data-aos="fade-up">
                     <form>
                         <div class="form-group">
                             <label for="name" data-i18n="contact.name">Nombre</label>
@@ -218,14 +218,13 @@
                         <button type="submit" class="btn-primary" data-i18n="contact.send">Enviar Mensaje</button>
                     </form>
                 </div>
-                <div class="contact-map" data-aos="fade-left">
+                <div class="contact-map" data-aos="fade-up">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.121158607182!2d-74.02419872414046!3d4.919389539721123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e40775e671ebfbd%3A0x79fa0e85906bc674!2sNotxus!5e0!3m2!1ses!2sco!4v1737511781727!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
     </section>
-    <script src="./js/i18n.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="../js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init();
