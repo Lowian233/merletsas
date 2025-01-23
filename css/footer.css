@@ -42,9 +42,11 @@ h1, h2, h3 {
     color: var(--color-light-gray);
       }
 footer img{
-        width: 120px;
+        width: 13rem;
         height: auto;
-        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+        padding-bottom: 5px;
+        box-shadow: inset 0 0 0 200px rgba(54, 53, 53, 0.486);
+        border-radius: var(--border-radius);
       }
   .main{
     display: grid;
