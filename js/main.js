@@ -14,31 +14,67 @@ document.addEventListener("scroll", () => {
     }
   });
   
-  document.addEventListener('DOMContentLoaded', function() {
-    // Cargar el header
-    fetch('componets/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-        // Lógica del menú móvil
-        const nav = document.querySelector("#nav");
-        const open = document.querySelector("#open");
-        const close = document.querySelector("#close");
-  
-        open.addEventListener("click", () => {
-          nav.classList.add("active");
-        });
-        close.addEventListener("click", () => {
-          nav.classList.remove("active");
-        });
-      });
+  document.addEventListener('DOMContentLoaded', function () {
+    // Detectar idioma basado en la URL
+    const currentPath = window.location.pathname;
+    let headerFile = '';
+
+    if (currentPath.includes('/es/')) {
+        // Si la URL contiene '/es/', cargar el header en español
+        headerFile = '../componets/header-es.html';
+    } else if (currentPath.includes('/en/')) {
+        // Si la URL contiene '/en/', cargar el header en inglés
+        headerFile = '../componets/header-en.html';
+    }
+
+    // Cargar el archivo de header correspondiente
+    if (headerFile) {
+        fetch(headerFile)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+
+                // Lógica del menú móvil
+                const nav = document.querySelector("#nav");
+                const open = document.querySelector("#open");
+                const close = document.querySelector("#close");
+
+                if (nav && open && close) {
+                    open.addEventListener("click", () => {
+                        nav.classList.add("active");
+                    });
+
+                    close.addEventListener("click", () => {
+                        nav.classList.remove("active");
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+    }
+});
    
-    // Cargar el footer
-    fetch('componets/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-        });
+document.addEventListener('DOMContentLoaded', function () {
+  // Detectar idioma basado en la URL
+  const currentPath = window.location.pathname;
+  let footerFile = '';
+
+  if (currentPath.includes('/es/')) {
+      // Si la URL contiene '/es/', cargar el footer en español
+      footerFile = '/components/footer-es.html';
+  } else if (currentPath.includes('/en/')) {
+      // Si la URL contiene '/en/', cargar el footer en inglés
+      footerFile = '/components/footer-en.html';
+  }
+
+  // Cargar el archivo de footer correspondiente
+  if (footerFile) {
+      fetch(footerFile)
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('footer').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading footer:', error));
+  }
 });
 // Simular la carga de la página
 document.addEventListener('DOMContentLoaded', () => {
