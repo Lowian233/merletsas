@@ -15,26 +15,31 @@ document.addEventListener("scroll", () => {
   });
   
   document.addEventListener('DOMContentLoaded', function () {
-    // Detectar idioma basado en la URL
+    // Detectar idioma y cargar el header correspondiente
     const currentPath = window.location.pathname;
     let headerFile = '';
 
     if (currentPath.includes('/es/')) {
-        // Si la URL contiene '/es/', cargar el header en español
         headerFile = '../componets/header-es.html';
     } else if (currentPath.includes('/en/')) {
-        // Si la URL contiene '/en/', cargar el header en inglés
         headerFile = '../componets/header-en.html';
     }
 
-    // Cargar el archivo de header correspondiente
     if (headerFile) {
         fetch(headerFile)
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
 
-                // Lógica del menú móvil
+                // Activar el efecto de scroll una vez cargado el header
+                const header = document.querySelector('.header');
+                if (header) {
+                    window.addEventListener('scroll', () => {
+                        header.classList.toggle('header--scrolled', window.scrollY > 10);
+                    });
+                }
+
+                // Lógica del menú móvil (opcional, si está incluido en el header)
                 const nav = document.querySelector("#nav");
                 const open = document.querySelector("#open");
                 const close = document.querySelector("#close");
@@ -51,7 +56,25 @@ document.addEventListener("scroll", () => {
             })
             .catch(error => console.error('Error loading header:', error));
     }
+
+    // Counter animation (se ejecuta directamente si está presente en la página)
+    const counterElement = document.getElementById("counter");
+    if (counterElement) {
+        let count = 0;
+        const target = 100; // Cambia este valor si el objetivo es diferente
+        const speed = 20; // Ajusta la velocidad de la animación
+
+        const updateCounter = () => {
+            if (count < target) {
+                count++;
+                counterElement.textContent = "+" + count;
+                setTimeout(updateCounter, speed);
+            }
+        };
+        updateCounter();
+    }
 });
+
    
 document.addEventListener('DOMContentLoaded', function () {
   // Detectar idioma basado en la URL
@@ -60,10 +83,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (currentPath.includes('/es/')) {
       // Si la URL contiene '/es/', cargar el footer en español
-      footerFile = '/components/footer-es.html';
+      footerFile = '../componets/footer-es.html';
   } else if (currentPath.includes('/en/')) {
       // Si la URL contiene '/en/', cargar el footer en inglés
-      footerFile = '/components/footer-en.html';
+      footerFile = '../componets/footer-en.html';
   }
 
   // Cargar el archivo de footer correspondiente
@@ -93,31 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
               preloader.style.display = 'none';
           }
       }, 30);
-  }
-
-  // Header scroll effect
-  window.addEventListener('scroll', () => {
-      const header = document.querySelector('.header');
-      if (header) {
-          header.classList.toggle('header--scrolled', window.scrollY > 10);
-      }
-  });
-
-  // Counter animation
-  const counterElement = document.getElementById("counter");
-  if (counterElement) {
-      let count = 0;
-      const target = 100;
-      const speed = 20;
-
-      const updateCounter = () => {
-          if (count < target) {
-              count++;
-              counterElement.textContent = "+" + count;
-              setTimeout(updateCounter, speed);
-          }
-      };
-      updateCounter();
   }
 
   // Stats counter animation

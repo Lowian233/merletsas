@@ -1,5 +1,40 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    /* Colores principales */
+    --color-orange: #F89D28;
+    --color-lime: #3C9C5A;
+
+    /* Colores secundarios */
+    --color-dark-green: #226B3F;
+    --color-light-gray: #F5F5F5;
+    --color-dark-gray: #333333;
+
+    /* Tipografías */
+    --font-title: 'Montserrat', sans-serif; /* Actualizamos a Montserrat */
+    --font-body: 'Montserrat', sans-serif; /* Usamos Montserrat para todo el cuerpo */
+
+    /* Otros */
+    --border-radius: 5px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Fondo general con degradado */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
 /* Search Area */
 .search-area {
+    margin: 2rem;
     padding: 2rem 0;
     background: var(--color-light-gray);
 }

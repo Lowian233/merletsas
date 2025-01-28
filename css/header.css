@@ -123,8 +123,8 @@
     .menu-close {
         display: block;
         display: flex;
-        align-items: space-between;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
         border: 0;
         font-size: 1.25rem;
         background-color: transparent;
@@ -164,7 +164,7 @@
 
     .nav-list {
         flex-direction: column;
-        align-items: center;
+        align-items: space-around;
         gap: 2rem;
         margin-top: 4rem;
     }
@@ -205,4 +205,4 @@
     .languages{
         display: none;
     }
-    }
+}
