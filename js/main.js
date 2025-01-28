@@ -156,28 +156,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-/* particlesJS("particles-js", {
-  particles: {
-      number: { value: 120 }, // Número de partículas
-      color: { value: "#ffffff" }, // Color de las partículas
-      shape: { type: "circle" }, // Forma de las partículas
-      opacity: { value: 0.5 }, // Opacidad
-      size: { value: 3 }, // Tamaño
-      move: {
-          speed: 2, // Velocidad
-          direction: "none", // Dirección
-          out_mode: "out", // Salir de la pantalla
-      },
-  },
-  interactivity: {
-      events: {
-          onhover: { enable: true, mode: "repulse" }, // Repeler al pasar el mouse
-          onclick: { enable: true, mode: "push" }, // Agregar partículas al hacer clic
-      },
-      modes: {
-          repulse: { distance: 100 }, // Distancia de repulsión
-          push: { particles_nb: 4 }, // Número de partículas al hacer clic
-      },
-  },
-  retina_detect: true, // Detección para pantallas retina
-}); */

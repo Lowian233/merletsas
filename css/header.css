@@ -203,6 +203,10 @@
 }
 /* Media Queries */
 @media screen and (max-width: 768px) {
+    .languages{
+        display: none;
+    }
+    
     .lang-button {
         position: fixed;
         top: 1rem;
