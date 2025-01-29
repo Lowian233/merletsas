@@ -9,33 +9,33 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
-    <link rel="shortcut icon" href="./assets/public/images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/public/images/logo.png" type="image/x-icon">
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
     <!-- styles   -->
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/hero.css">
     <link rel="stylesheet" href="../css/header.css">
-
+    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body>
     <div id="header"></div>
     <!-- Hero Section -->
-    <section id="hero" class="hero-video">
+    <section  class="hero-video">
         <video autoplay muted loop class="hero-video-background">
-            <source src="../assets/public/videos/hero.mp4" type="video/mp4">
+          <source src="../assets/public/videos/hero.mp4" type="video/mp4">
             Your browser does not support HTML5 videos.
         </video>
         <div class="hero-overlay">
-            <div class="hero-content">
+          <div class="hero-content">
                 <h1>From Our Orchards<br>Premium Citrus Fruits</h1>
                 <p>Enjoy the finest selection of citrus fruits, grown with care and tradition in our family orchards since 1950.</p>
-                <div class="hero-buttons">
+            <div class="hero-buttons">
                     <a href="../en/products.html" class="btn-primary">Explore Our Products</a>
                     <a href="../en/about.html" class="btn-secondary">About Us</a>
-                </div>
             </div>
+          </div>
         </div>
     </section>
     <!-- Statistics Section -->
@@ -61,12 +61,11 @@
             </div>
         </div>
     </section>
-
-    <!-- Enhanced About Section -->
+    <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
             <div class="about-grid">
-                <div class="about-content" data-aos="fade-right">
+                <div class="about-content" data-aos="fade-up">
                     <h2 data-i18n="about.title">Our Heritage</h2>
                     <p data-i18n="about.description">At Merlet, we specialize in exporting high-quality citrus products. With years of experience in international markets, we ensure freshness and compliance with the highest standards.</p>
                     <div class="about-features">
@@ -84,13 +83,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-image" data-aos="fade-left">
+                <div class="about-image" data-aos="fade-up">
                     <img src="../assets/public/images/heritage/farm-1.jpg" alt="Our Orchards">
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Certifications Section -->
     <section id="certifications" class="cert-section">
         <div class="container">
@@ -104,76 +102,68 @@
                     <img src="../assets/public/images/icons/home.svg" alt="Certification 2">
                     <h3>ISO 9001</h3>
                 </div>
-                <!-- Add more certifications as needed -->
             </div>
         </div>
     </section>
-                <!-- Products Section -->
-<section id="products" class="products-section">
-    <div class="container">
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
         <h2 data-i18n="products.title">Our Products</h2>
-        <div class="product-grid">
-            <div class="product-card" data-aos="fade-up">
-                <div class="product-image">
+            <div class="product-grid">
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-image">
                     <img src="../assets/public/images/products/naranja.jpg" alt="Oranges">
-                </div>
-                <div class="product-content">
+                    </div>
+                    <div class="product-content">
                     <h3 data-i18n="products.oranges.title">Fresh Oranges</h3>
                     <p data-i18n="products.oranges.description">Premium quality oranges, perfect for juice and consumption.</p>
                     <a href="../en/products.html#oranges" class="btn-secondary">Learn More</a>
                 </div>
-            </div>
-
-            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="product-image">
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-image">
                     <img src="../assets/public/images/products/lemons.jpg" alt="Lemons">
-                </div>
-                <div class="product-content">
+                    </div>
+                    <div class="product-content">
                     <h3 data-i18n="products.lemons.title">Fresh Lemons</h3>
                     <p data-i18n="products.lemons.description">High-quality lemons for various culinary applications.</p>
                     <a href="../pages/products.html#lemons" class="btn-secondary">Learn More</a>
                 </div>
-            </div>
-
-            <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="product-image">
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-image">
                     <img src="../assets/public/images/products/lemons.jpg" alt="Limes">
-                </div>
-                <div class="product-content">
+                    </div>
+                    <div class="product-content">
                     <h3 data-i18n="products.limes.title">Fresh Limes</h3>
                     <p data-i18n="products.limes.description">Premium limes for cocktails and cooking.</p>
                     <a href="../pages/products.html#limes" class="btn-secondary">Learn More</a>
                 </div>
-            </div>
-
-            <div class="product-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="product-image">
+                <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-image">
                     <img src="../assets/public/images/products/mandarins.jpg" alt="Mandarins">
-                </div>
-                <div class="product-content">
+                    </div>
+                    <div class="product-content">
                     <h3 data-i18n="products.mandarins.title">Fresh Mandarins</h3>
                     <p data-i18n="products.mandarins.description">Sweet and easy to peel mandarins.</p>
                     <a href="../pages/products.html#mandarins" class="btn-secondary">Learn More</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section>
-    <div class="product-features">
-         <div class="feature" data-aos="fade-up">
-                    <i class="bi bi-truck"></i>
+    </section>
+    <section>
+        <div class="product-features">
+             <div class="feature" data-aos="fade-up">
+                <i class="bi bi-truck"></i>
                     <h3 data-i18n="products.shipping">Global Shipping</h3>
                     <p data-i18n="products.shipping_desc">Fast and reliable delivery worldwide</p>
-        </div>
-        <div class="feature" data-aos="fade-up" data-aos-delay="100">
+            </div>
+            <div class="feature" data-aos="fade-up" data-aos-delay="100">
              <i class="bi bi-shield-check"></i>
              <h3 data-i18n="products.quality">Quality Guarantee</h3>
              <p data-i18n="products.quality_desc">Rigorous quality control standards</p>
+            </div>
         </div>
-        </div>
-</section>
-
+    </section>
     <!-- Export Map Section -->
     <section id="export-map" class="map-section">
         <div class="container">
@@ -186,36 +176,34 @@
     </section>
 
     <!-- Contact Section -->
-<section id="contact" class="contact-section">
-    <div class="container">
+    <section id="contact" class="contact-section">
+        <div class="container">
         <h2 data-i18n="contact.title">Contact Us</h2>
-        <div class="contact-grid">
-            <div class="contact-form" data-aos="fade-right">
-                <form>
-                    <div class="form-group">
+            <div class="contact-grid">
+            <div class="contact-form" data-aos="fade-up">
+                    <form>
+                        <div class="form-group">
                         <label for="name" data-i18n="contact.name">Name</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    <div class="form-group">
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
                         <label for="email" data-i18n="contact.email">Email</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="form-group">
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
                         <label for="message" data-i18n="contact.message">Message</label>
-                        <textarea id="message" rows="5" required></textarea>
-                    </div>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
                     <button type="submit" class="btn-primary" data-i18n="contact.send">Send Message</button>
-                </form>
-            </div>
-            <div class="contact-map" data-aos="fade-left">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.121158607182!2d-74.02419872414046!3d4.919389539721123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e40775e671ebfbd%3A0x79fa0e85906bc674!2sNotxus!5e0!3m2!1ses!2sco!4v1737511781727!5m2!1ses!2sco" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </form>
+                </div>
+                <div class="contact-map" data-aos="fade-up">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.121158607182!2d-74.02419872414046!3d4.919389539721123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e40775e671ebfbd%3A0x79fa0e85906bc674!2sNotxus!5e0!3m2!1ses!2sco!4v1737511781727!5m2!1ses!2sco"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-    <div id="footer"></div>
-    <script src="../js/i18n.js"></script>
+    </section>
+    <footer id="footer"></footer>
     <script src="../js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>

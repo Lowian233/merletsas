@@ -1,20 +1,4 @@
-// Mostrar/Ocultar botón de WhatsApp
-document.addEventListener("scroll", () => {
-    const whatsappButton = document.querySelector(".whatsapp-button");
-    const contactSection = document.querySelector("#contact"); // Asegúrate de que la sección de contacto tenga el id "contact"
-    const contactSectionTop = contactSection.offsetTop;
-    const contactSectionBottom = contactSectionTop + contactSection.offsetHeight;
-  
-    if (window.scrollY >= contactSectionTop && window.scrollY <= contactSectionBottom) {
-      whatsappButton.classList.add("hidden");
-      whatsappButton.classList.remove("visible");
-    } else {
-      whatsappButton.classList.add("visible");
-      whatsappButton.classList.remove("hidden");
-    }
-  });
-  
-  document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     // Detectar idioma y cargar el header correspondiente
     const currentPath = window.location.pathname;
     let headerFile = '';
@@ -56,6 +40,23 @@ document.addEventListener("scroll", () => {
             })
             .catch(error => console.error('Error loading header:', error));
     }
+// Mostrar/Ocultar botón de WhatsApp
+document.addEventListener("scroll", () => {
+    const whatsappButton = document.querySelector(".whatsapp-button");
+    const contactSection = document.querySelector("#contact"); // Asegúrate de que la sección de contacto tenga el id "contact"
+    const contactSectionTop = contactSection.offsetTop;
+    const contactSectionBottom = contactSectionTop + contactSection.offsetHeight;
+  
+    if (window.scrollY >= contactSectionTop && window.scrollY <= contactSectionBottom) {
+      whatsappButton.classList.add("hidden");
+      whatsappButton.classList.remove("visible");
+    } else {
+      whatsappButton.classList.add("visible");
+      whatsappButton.classList.remove("hidden");
+    }
+  });
+  
+  
 
     // Counter animation (se ejecuta directamente si está presente en la página)
     const counterElement = document.getElementById("counter");
