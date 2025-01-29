@@ -190,4 +190,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   }
 });
+/* carrusel */
 
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.getElementById('logoCarousel');
+    let offset = 0;
+  
+    setInterval(() => {
+      offset -= 25; // mueve 25% a la izquierda
+      if (Math.abs(offset) >= 100) {
+        offset = 0; // reinicia cuando llegues al final
+      }
+      carousel.style.transform = `translateX(${offset}%)`;
+    }, 300);
+  });
