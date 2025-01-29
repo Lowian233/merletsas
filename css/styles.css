@@ -324,11 +324,21 @@ button:hover {
     }
 }
 @media (max-width: 768px) {
+    .contact-section {
+        padding: 3rem 1rem;
+    }
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
     .contact-map {
-        min-height: 300px;
+        margin: 0 auto;
+        height: 300px;
+        width: 300px;
+    }
+}
+@media (max-width: 480px) {
+    .contact-map {
+        height: 250px;
     }
 }

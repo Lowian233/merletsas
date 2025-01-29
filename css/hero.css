@@ -112,5 +112,6 @@
 @media screen and (max-width: 768px) {
     .hero-video {
         height: calc(100vh - 50px); /* Ajusta para dispositivos móviles */
+        padding: 0;
     }
 }
