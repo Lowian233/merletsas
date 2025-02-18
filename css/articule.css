@@ -1,0 +1,89 @@
+/* Estilos globales de la página */
+:root {
+    /* Colores principales */
+    --color-orange: #F89D28;
+    --color-lime: #3C9C5A;
+
+    /* Colores secundarios */
+    --color-dark-green: #226B3F;
+    --color-light-gray: #F5F5F5;
+    --color-dark-gray: #333333;
+
+    /* Tipografías */
+    --font-title: 'Montserrat', sans-serif; /* Actualizamos a Montserrat */
+    --font-body: 'Montserrat', sans-serif; /* Usamos Montserrat para todo el cuerpo */
+
+    /* Otros */
+    --border-radius: 5px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--color-dark-gray);   
+    background-color: var(--color-light-gray);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Contenedor general para centrar el contenido */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos globales para el artículo */
+.news-article {
+    background-color:var(--color-light-gray);    
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: var(--box-shadow);
+}
+
+.news-article h1,
+.news-article h2,
+.news-article h3 {
+    text-align: center;
+    margin-top: 6rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-dark-green);
+    margin-bottom: 1rem;
+}
+
+article p {
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+}
+
+/* Ajustando enlaces dentro del artículo */
+article a {
+    color: var(--color-orange);
+    text-decoration: none;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+.container-bg{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.article-header {
+    margin-bottom: 2rem;
+}
+.meta {
+    color: var(--color-dark-gray);
+    font-size: 0.9rem;
+}

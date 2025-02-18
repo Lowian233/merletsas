@@ -34,8 +34,11 @@ body {
 }
 /* Search Area */
 .search-area {
+    display: flex;
     margin: 2rem;
     padding: 2rem 0;
+    right: 0;
+    align-content: flex-start;
     background: var(--color-light-gray);
 }
 
@@ -54,7 +57,15 @@ body {
 
 .search-bar button {
     padding: 0.8rem 1.5rem;
+    margin: 10px;
     margin-left: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+
+}
+.search-bar button:hover {
+    background: var(--color-orange);
 }
 
 /* News Grid */
@@ -76,14 +87,14 @@ body {
 }
 
 .latest-news-bg {
-    height: 200px;
+    height: 20rem;
     background-size: cover;
     background-position: center;
 }
 
-.news-bg-1 { background-image: url('../assets/public/images/news/news-1.jpg'); }
-.news-bg-2 { background-image: url('../assets/public/images/news/news-2.jpg'); }
-.news-bg-3 { background-image: url('../assets/public/images/news/news-3.jpg'); }
+.news-bg-1 { background-image: url('../assets/public/images/MERLET-03.jpg');}
+.news-bg-2 { background-image: url('../assets/public/images/MERLET-04.jpg');}
+.news-bg-3 { background-image: url('../assets/public/images/MERLET-07.jpg');}
 
 .news-text-box {
     padding: 2rem;
@@ -99,6 +110,7 @@ body {
     text-decoration: none;
     transition: var(--transition);
 }
+
 
 .news-text-box h3 a:hover {
     color: var(--color-orange);

@@ -49,9 +49,12 @@
 }
 
 .header .logo img {
-    
+    cursor: pointer;
     width: 140px;
     height: auto;
+}
+.header .logo a{
+    text-decoration: none;
 }
 .header .nav {
     order: 1; /* Mueve la navegación al inicio */

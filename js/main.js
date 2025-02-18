@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 /* carrusel */
 
-document.addEventListener('DOMContentLoaded', function () {
+/* document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.getElementById('logoCarousel');
     let offset = 0;
   
@@ -204,3 +204,5 @@ document.addEventListener('DOMContentLoaded', function () {
       carousel.style.transform = `translateX(${offset}%)`;
     }, 300);
   });
+ */
+  
