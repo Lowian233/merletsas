@@ -30,7 +30,7 @@
         <div class="hero-overlay">
           <div class="hero-content">
                 <h1>From Our Orchards<br>Premium Citrus Fruits</h1>
-                <p>Enjoy the finest selection of citrus fruits, grown with care and tradition in our family orchards since 1950.</p>
+                <p>Enjoy the finest selection of citrus fruits, grown with care and tradition in our family orchards since 1980.</p>
             <div class="hero-buttons">
                     <a href="../en/products.html" class="btn-primary">Explore Our Products</a>
                     <a href="../en/about.html" class="btn-secondary">About Us</a>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="about-image" data-aos="fade-up">
-                    <img src="../assets/public/images/heritage/farm-1.jpg" alt="Our Orchards">
+                    <img src="../assets/public/images/MERLET-02.jpg" alt="Our Orchards">
                 </div>
             </div>
         </div>
@@ -95,13 +95,12 @@
             <h2 data-i18n="certifications.title">Our Certifications</h2>
             <div class="cert-grid">
                 <div class="cert-item" data-aos="zoom-in">
-                    <img src="../assets/public/images/icons/moon.png" alt="Certification 1">
-                    <h3>GlobalG.A.P</h3>
+                    <img src="../assets/public/images/GLOBAL.png" alt="Certification 1">
                 </div>
-                <div class="cert-item" data-aos="zoom-in" data-aos-delay="100">
+                <!-- <div class="cert-item" data-aos="zoom-in" data-aos-delay="100">
                     <img src="../assets/public/images/icons/home.svg" alt="Certification 2">
                     <h3>ISO 9001</h3>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -117,7 +116,8 @@
                     <div class="product-content">
                     <h3 data-i18n="products.oranges.title">Fresh Oranges</h3>
                     <p data-i18n="products.oranges.description">Premium quality oranges, perfect for juice and consumption.</p>
-                    <a href="../en/products.html#oranges" class="btn-secondary">Learn More</a>
+                    <button class="btn-secondary modal-trigger" data-modal="modal-oranges">Learn More</button>
+                    </div>
                 </div>
                 <div class="product-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="product-image">
@@ -126,8 +126,9 @@
                     <div class="product-content">
                     <h3 data-i18n="products.lemons.title">Fresh Lemons</h3>
                     <p data-i18n="products.lemons.description">High-quality lemons for various culinary applications.</p>
-                    <a href="../pages/products.html#lemons" class="btn-secondary">Learn More</a>
-                </div>
+                    <button class="btn-secondary modal-trigger" data-modal="modal-lemons">Learn More</button>
+                    </div>
+                </div>    
                 <div class="product-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="product-image">
                     <img src="../assets/public/images/products/lemons.jpg" alt="Limes">
@@ -135,7 +136,8 @@
                     <div class="product-content">
                     <h3 data-i18n="products.limes.title">Fresh Limes</h3>
                     <p data-i18n="products.limes.description">Premium limes for cocktails and cooking.</p>
-                    <a href="../pages/products.html#limes" class="btn-secondary">Learn More</a>
+                    <button class="btn-secondary modal-trigger" data-modal="modal-limes">Learn More</button>
+                    </div>
                 </div>
                 <div class="product-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="product-image">
@@ -144,11 +146,11 @@
                     <div class="product-content">
                     <h3 data-i18n="products.mandarins.title">Fresh Mandarins</h3>
                     <p data-i18n="products.mandarins.description">Sweet and easy to peel mandarins.</p>
-                    <a href="../pages/products.html#mandarins" class="btn-secondary">Learn More</a>
+                    <button class="btn-secondary modal-trigger" data-modal="modal-mandarins">Learn More</button>
                     </div>
                 </div>
-            </div>
-        </div>
+          </div>
+     </div>
     </section>
     <section>
         <div class="product-features">
@@ -204,6 +206,89 @@
         </div>
     </section>
     <footer id="footer"></footer>
+    <!-- Oranges Modal -->
+<div class="modal" id="modal-oranges">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <img src="../assets/public/images/products/naranja.jpg" alt="Oranges">
+            <h2>Fresh Oranges</h2>
+            <p>Our oranges are grown under the highest quality standards...</p>
+            <ul class="product-feature-list">
+                <li><i class="bi bi-check-circle"></i> Organically grown</li>
+                <li><i class="bi bi-check-circle"></i> High vitamin C content</li>
+                <li><i class="bi bi-check-circle"></i> Perfect for fresh juice</li>
+            </ul>
+            <div class="modal-buttons">
+                <button class="close-modal btn-secondary">Close</button>
+                <a href="./products.html" class="btn-primary">View All Products</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Lemons Modal -->
+<div class="modal" id="modal-lemons">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <img src="../assets/public/images/products/lemons.jpg" alt="Lemons">
+            <h2>Fresh Lemons</h2>
+            <p>Our lemons are grown to the highest standards...</p>
+            <ul class="product-feature-list">
+                <li><i class="bi bi-check-circle"></i> Intense fresh flavor</li>
+                <li><i class="bi bi-check-circle"></i> Perfect for cooking and drinks</li>
+                <li><i class="bi bi-check-circle"></i> Guaranteed quality</li>
+            </ul>
+            <div class="modal-buttons">
+                <button class="close-modal btn-secondary">Close</button>
+                <a href="./products.html" class="btn-primary">View All Products</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Limes Modal -->
+<div class="modal" id="modal-limes">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <img src="../assets/public/images/products/limes.jpg" alt="Limes">
+            <h2>Fresh Limes</h2>
+            <p>Our limes are grown following strict quality standards...</p>
+            <ul class="product-feature-list">
+                <li><i class="bi bi-check-circle"></i> Intense natural aroma</li>
+                <li><i class="bi bi-check-circle"></i> Perfect for cocktails</li>
+                <li><i class="bi bi-check-circle"></i> Guaranteed freshness</li>
+            </ul>
+            <div class="modal-buttons">
+                <button class="close-modal btn-secondary">Close</button>
+                <a href="./products.html" class="btn-primary">View All Products</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mandarins Modal -->
+<div class="modal" id="modal-mandarins">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <img src="../assets/public/images/products/mandarins.jpg" alt="Mandarins">
+            <h2>Fresh Mandarins</h2>
+            <p>Our mandarins are carefully selected to ensure the best quality...</p>
+            <ul class="product-feature-list">
+                <li><i class="bi bi-check-circle"></i> Sweet and juicy</li>
+                <li><i class="bi bi-check-circle"></i> Easy to peel</li>
+                <li><i class="bi bi-check-circle"></i> Perfect for healthy snacks</li>
+            </ul>
+            <div class="modal-buttons">
+                <button class="close-modal btn-secondary">Close</button>
+                <a href="./products.html" class="btn-primary">View All Products</a>
+            </div>
+        </div>
+    </div>
+</div>
     <script src="../js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>

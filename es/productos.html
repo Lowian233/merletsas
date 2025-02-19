@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Productos - Merlet</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/public/images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header id="header"></header>
+
+    <!-- Sección de Portada -->
+    <section class="product-hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">Nuestra Colección Premium de Cítricos</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Descubre nuestra selección de cítricos de alta calidad</p>
+        </div>
+    </section>
+
+    <!-- Cuadrícula de Productos -->
+    <section class="products-showcase">
+        <div class="container">
+            <div class="products-grid">
+                <!-- Tarjeta de Naranjas -->
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-image">
+                        <img src="../assets/public/images/products/naranja.jpg" alt="Naranjas Frescas">
+                        <div class="product-overlay">
+                            <button class="modal-trigger" data-modal="modal-oranges">Saber Más</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Naranjas Premium</h3>
+                        <p>Naranjas dulces y jugosas, perfectas para jugo fresco</p>
+                        <div class="product-badges">
+                            <span class="badge organic">Orgánico</span>
+                            <span class="badge export">Calidad de Exportación</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta de Limones -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="../assets/public/images/products/lemons.jpg" alt="Limones Frescos">
+                        <div class="product-overlay">
+                            <button class="modal-trigger" data-modal="modal-lemons">Saber Más</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Limones Frescos</h3>
+                        <p class="product-description">Limones brillantes y vibrantes, ideales para cocinar y para bebidas</p>
+                        <div class="product-badges">
+                            <span class="badge organic">Orgánico</span>
+                            <span class="badge export">Calidad de Exportación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Limas -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-image">
+                        <img src="../assets/public/images/products/limes.jpg" alt="Limas Frescas">
+                        <div class="product-overlay">
+                            <button class="modal-trigger" data-modal="modal-limes">Saber Más</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Limas Frescas</h3>
+                        <p class="product-description">Perfectas para cócteles y creaciones culinarias</p>
+                        <div class="product-badges">
+                            <span class="badge organic">Orgánico</span>
+                            <span class="badge export">Calidad de Exportación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Mandarinas -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-image">
+                        <img src="../assets/public/images/products/mandarins.jpg" alt="Mandarinas Frescas">
+                        <div class="product-overlay">
+                            <button class="modal-trigger" data-modal="modal-mandarins">Saber Más</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Mandarinas Dulces</h3>
+                        <p class="product-description">Fáciles de pelar, perfectas para un snack saludable</p>
+                        <div class="product-badges">
+                            <span class="badge organic">Orgánico</span>
+                            <span class="badge export">Calidad de Exportación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características del Producto -->
+    <section class="product-features-section">
+        <div class="container">
+            <h2 data-aos="fade-up">¿Por qué elegir nuestros cítricos?</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="zoom-in">
+                    <i class="bi bi-droplet-fill"></i>
+                    <h3>Cultivo Natural</h3>
+                    <p>Cultivados con cuidado y respeto por la naturaleza</p>
+                </div>
+                <!-- Agregar más tarjetas de características -->
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+    <!-- Incluir modales desde index -->
+     
+    <!-- Modal Naranjas -->
+<div class="modal" id="modal-oranges">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body">
+        <img src="../assets/public/images/products/naranja.jpg" alt="Naranjas Frescas">
+        <h2>Naranjas Premium</h2>
+        <p>Nuestras naranjas son cultivadas bajo los más altos estándares de calidad, garantizando un fruto dulce, jugoso y repleto de sabor natural. Disfruta de su frescura en cada bocado y aprovecha sus altos niveles de vitamina C para fortalecer tu sistema inmunológico.</p>
+        <h3>Beneficios</h3>
+        <ul class="product-feature-list">
+          <li><i class="bi bi-check-circle"></i> Cultivadas orgánicamente</li>
+          <li><i class="bi bi-check-circle"></i> Alto contenido de vitamina C</li>
+          <li><i class="bi bi-check-circle"></i> Perfectas para jugo natural</li>
+        </ul>
+        <h3>Usos Recomendados</h3>
+        <p>Ideales para elaborar jugos, postres y mermeladas, o simplemente disfrutarlas al natural.</p>
+        <div class="modal-buttons">
+          <button class="close-modal btn-secondary">Cerrar</button>
+          <a href="./contact.html" class="btn-primary">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Limones -->
+  <div class="modal" id="modal-lemons">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body">
+        <img src="../assets/public/images/products/lemons.jpg" alt="Limones Frescos">
+        <h2>Limones Frescos</h2>
+        <p>Nuestros limones, reconocidos por su acidez perfecta y aroma intenso, se cultivan con rigurosos controles de calidad para asegurar su frescura y sabor inigualable.</p>
+        <h3>Beneficios</h3>
+        <ul class="product-feature-list">
+          <li><i class="bi bi-check-circle"></i> Sabor brillante y ácido</li>
+          <li><i class="bi bi-check-circle"></i> Rico en antioxidantes</li>
+          <li><i class="bi bi-check-circle"></i> Ideal para cocinar y para bebidas</li>
+        </ul>
+        <h3>Usos Recomendados</h3>
+        <p>Perfectos para aderezos, infusiones, repostería y bebidas refrescantes.</p>
+        <div class="modal-buttons">
+          <button class="close-modal btn-secondary">Cerrar</button>
+          <a href="./contact.html" class="btn-primary">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Limas -->
+  <div class="modal" id="modal-limes">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body">
+        <img src="../assets/public/images/products/limes.jpg" alt="Limas Frescas">
+        <h2>Limas Frescas</h2>
+        <p>Nuestras limas se cultivan bajo estrictos controles de calidad para ofrecerte un producto con un aroma intenso y un sabor refrescante, ideal para realzar tanto bebidas como platos exóticos.</p>
+        <h3>Beneficios</h3>
+        <ul class="product-feature-list">
+          <li><i class="bi bi-check-circle"></i> Aroma natural e intenso</li>
+          <li><i class="bi bi-check-circle"></i> Alta acidez equilibrada</li>
+          <li><i class="bi bi-check-circle"></i> Frescura garantizada</li>
+        </ul>
+        <h3>Usos Recomendados</h3>
+        <p>Ideales para cócteles, salsas y adobos, aportando un toque único a tus recetas.</p>
+        <div class="modal-buttons">
+          <button class="close-modal btn-secondary">Cerrar</button>
+          <a href="./contact.html" class="btn-primary">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Mandarinas -->
+  <div class="modal" id="modal-mandarins">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body">
+        <img src="../assets/public/images/products/mandarins.jpg" alt="Mandarinas Frescas">
+        <h2>Mandarinas Dulces</h2>
+        <p>Nuestras mandarinas son cuidadosamente seleccionadas para garantizar un fruto jugoso, dulce y fácil de pelar, haciendo de ellas un snack saludable para cualquier momento del día.</p>
+        <h3>Beneficios</h3>
+        <ul class="product-feature-list">
+          <li><i class="bi bi-check-circle"></i> Dulces y jugosas</li>
+          <li><i class="bi bi-check-circle"></i> Ricas en nutrientes</li>
+          <li><i class="bi bi-check-circle"></i> Fáciles de pelar</li>
+        </ul>
+        <h3>Usos Recomendados</h3>
+        <p>Ideales para consumir al natural, en postres o como ingrediente en ensaladas y batidos.</p>
+        <div class="modal-buttons">
+          <button class="close-modal btn-secondary">Cerrar</button>
+          <a href="./contact.html" class="btn-primary">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="../js/main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</html>

@@ -34,7 +34,7 @@
               Cítricos de Primera Calidad
             </h1>
             <p data-section="hero" data-key="subheading">
-              Disfruta de la mejor selección de cítricos, cultivados con esmero y tradición en nuestros huertos familiares desde 1950.
+              Disfruta de la mejor selección de cítricos, cultivados con esmero y tradición en nuestros huertos familiares desde 1980.
             </p>
             <div class="hero-buttons">
               <a href="./productos.html" class="btn-primary" data-section="hero" data-key="btn_products">Explora Nuestros Productos</a>
@@ -89,7 +89,7 @@
                     </div>
                 </div>
                 <div class="about-image" data-aos="fade-up">
-                    <img src="../assets/public/images/MERLET-07.jpg" alt="Nuestros Huertos">
+                    <img src="../assets/public/images/MERLET-02.jpg" alt="Nuestros Huertos">
                 </div>
             </div>
         </div>
@@ -100,13 +100,12 @@
             <h2 data-i18n="certifications.title">Nuestras Certificaciones</h2>
             <div class="cert-grid">
                 <div class="cert-item" data-aos="zoom-in">
-                    <img src="../assets/public/images/icons/moon.png" alt="Certificación 1">
-                    <h3>GlobalG.A.P</h3>
+                    <img src="../assets/public/images/GLOBAL.png" alt="Certification 1">
                 </div>
-                <div class="cert-item" data-aos="zoom-in" data-aos-delay="100">
+              <!--   <div class="cert-item" data-aos="zoom-in" data-aos-delay="100">
                     <img src="../assets/public/images/icons/home.svg" alt="Certificación 2">
                     <h3>ISO 9001</h3>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -122,7 +121,7 @@
                     <div class="product-content">
                         <h3 data-i18n="products.oranges.title">Naranjas Frescas</h3>
                         <p data-i18n="products.oranges.description">Naranjas de calidad premium, ideales para jugo y consumo.</p>
-                        <a href="../pages/products.html#oranges" class="btn-secondary">Saber Más</a>
+                        <button class="btn-secondary modal-trigger" data-modal="modal-naranjas">Saber Más</button>
                     </div>
                 </div>
                 <div class="product-card" data-aos="fade-up" data-aos-delay="100">
@@ -132,7 +131,7 @@
                     <div class="product-content">
                         <h3 data-i18n="products.lemons.title">Limones Frescos</h3>
                         <p data-i18n="products.lemons.description">Limones de alta calidad para diversas aplicaciones culinarias.</p>
-                        <a href="./pages/products.html#lemons" class="btn-secondary">Saber Más</a>
+                        <button class="btn-secondary modal-trigger" data-modal="modal-limones">Saber Más</button=>
                     </div>
                 </div>
                 <div class="product-card" data-aos="fade-up" data-aos-delay="200">
@@ -142,7 +141,7 @@
                     <div class="product-content">
                         <h3 data-i18n="products.limes.title">Limas Frescas</h3>
                         <p data-i18n="products.limes.description">Limas premium para cocteles y cocina.</p>
-                        <a href="./pages/products.html#limes" class="btn-secondary">Saber Más</a>
+                        <button  class="btn-secondary modal-trigger" data-modal="modal-limas">Saber Más</button>
                     </div>
                 </div>
                 <div class="product-card" data-aos="fade-up" data-aos-delay="300">
@@ -152,7 +151,7 @@
                     <div class="product-content">
                         <h3 data-i18n="products.mandarins.title">Mandarinas Frescas</h3>
                         <p data-i18n="products.mandarins.description">Mandarinas dulces y fáciles de pelar.</p>
-                        <a href="../pages/products.html#mandarins" class="btn-secondary">Saber Más</a>
+                        <button class="btn-secondary modal-trigger" data-modal="modal-mandarinas">Saber Más</button>
                     </div>
                 </div>
             </div>
@@ -211,6 +210,87 @@
         </div>
     </section>
     <footer id="footer"></footer>
+    <!-- Modales de Productos -->
+<div class="modal" id="modal-naranjas">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <img src="../assets/public/images/products/naranja.jpg" alt="Naranjas">
+            <h2>Naranjas Frescas</h2>
+            <p>Nuestras naranjas son cultivadas bajo los más altos estándares de calidad...</p>
+            <ul class="product-feature-list">
+                <li><i class="bi bi-check-circle"></i> Cultivadas orgánicamente</li>
+                <li><i class="bi bi-check-circle"></i> Alto contenido de vitamina C</li>
+                <li><i class="bi bi-check-circle"></i> Perfectas para jugo fresco</li>
+            </ul>
+            <div class="modal-buttons">
+                <button class="close-modal btn-secondary">Cerrar</button>
+                <a href="./productos.html" class="btn-primary">Ver Todos los Productos</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Limones -->
+<div class="modal" id="modal-limones">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <img src="../assets/public/images/products/lemons.jpg" alt="Limones">
+            <h2>Limones Frescos</h2>
+            <p>Nuestros limones son cultivados con los más altos estándares...</p>
+            <ul class="product-feature-list">
+                <li><i class="bi bi-check-circle"></i> Sabor intenso y fresco</li>
+                <li><i class="bi bi-check-circle"></i> Ideales para cocina y bebidas</li>
+                <li><i class="bi bi-check-circle"></i> Alta calidad garantizada</li>
+            </ul>
+            <div class="modal-buttons">
+                <button class="close-modal btn-secondary">Cerrar</button>
+                <a href="./productos.html" class="btn-primary">Ver Todos los Productos</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Limas -->
+<div class="modal" id="modal-limas">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <img src="../assets/public/images/products/limes.jpg" alt="Limas">
+            <h2>Limas Frescas</h2>
+            <p>Nuestras limas son cultivadas siguiendo estrictos estándares de calidad...</p>
+            <ul class="product-feature-list">
+                <li><i class="bi bi-check-circle"></i> Aroma intenso y natural</li>
+                <li><i class="bi bi-check-circle"></i> Perfectas para cócteles</li>
+                <li><i class="bi bi-check-circle"></i> Frescura garantizada</li>
+            </ul>
+            <div class="modal-buttons">
+                <button class="close-modal btn-secondary">Cerrar</button>
+                <a href="./productos.html" class="btn-primary">Ver Todos los Productos</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Mandarinas -->
+<div class="modal" id="modal-mandarinas">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <img src="../assets/public/images/products/mandarins.jpg" alt="Mandarinas">
+            <h2>Mandarinas Frescas</h2>
+            <p>Nuestras mandarinas son seleccionadas cuidadosamente para garantizar la mejor calidad...</p>
+            <ul class="product-feature-list">
+                <li><i class="bi bi-check-circle"></i> Dulces y jugosas</li>
+                <li><i class="bi bi-check-circle"></i> Fáciles de pelar</li>
+                <li><i class="bi bi-check-circle"></i> Ideales para snacks saludables</li>
+            </ul>
+            <div class="modal-buttons">
+                <button class="close-modal btn-secondary">Cerrar</button>
+                <a href="./productos.html" class="btn-primary">Ver Todos los Productos</a>
+            </div>
+        </div>
+    </div>
+</div>
     <script src="../js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
